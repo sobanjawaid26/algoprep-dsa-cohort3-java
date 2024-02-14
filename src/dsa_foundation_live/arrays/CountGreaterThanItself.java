@@ -1,4 +1,4 @@
-package dsa_live.arrays;
+package dsa_foundation_live.arrays;
 
 public class CountGreaterThanItself {
 

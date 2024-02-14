@@ -1,4 +1,4 @@
-package dsa_live.strings;
+package dsa_foundation_live.strings;
 
 public class Characters1 {
 
