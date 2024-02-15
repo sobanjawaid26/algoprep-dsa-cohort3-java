@@ -22,6 +22,6 @@ public class Characters1 {
         System.out.println(ch5); // SAME RESULT
 
         System.out.println("--------------------------------------");
- 
+
     }
 }
