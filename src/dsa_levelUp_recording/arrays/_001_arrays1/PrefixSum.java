@@ -1,4 +1,4 @@
-package dsa_levelUp_recording.arrays.arrays1;
+package dsa_levelUp_recording.arrays._001_arrays1;
 
 public class PrefixSum {
 
