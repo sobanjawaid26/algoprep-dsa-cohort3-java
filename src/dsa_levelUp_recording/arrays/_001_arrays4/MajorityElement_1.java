@@ -2,6 +2,18 @@ package dsa_levelUp_recording.arrays._001_arrays4;
 
 public class MajorityElement_1 {
 
+    /*
+        if we cancel out 1 majority element no with
+        1 non majority element number the non cancelled
+        number at the end is going to be majorityelem
+
+        you don't need to know majority element
+        you cancel out
+        3ggtg IImen
+        Summary Cancel out 2 distinct elements one by
+        one the uncancelled element is going to
+        be majority element
+     */
     public static int findMajorityElement_1(int[] arr){
         int val = arr[0];
         int count = 1;
