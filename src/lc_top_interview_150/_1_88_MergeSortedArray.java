@@ -1,6 +1,6 @@
 package lc_top_interview_150;
 
-public class _88_MergeSortedArray {
+public class _1_88_MergeSortedArray {
 
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         int i = m-1;
