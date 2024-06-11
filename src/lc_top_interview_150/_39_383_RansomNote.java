@@ -26,6 +26,25 @@ public class _39_383_RansomNote {
         return true;
     }
 
+    public boolean canConstruct_0(String ransomNote, String magazine) {
+        int arr[] = new int[26];
+
+        for(char r : ransomNote.toCharArray()){
+            arr[r - 'a']++;
+        }
+
+        for(char r : magazine.toCharArray()){
+            arr[r - 'a']--;
+        }
+
+        for(int i: arr){
+            if(i > 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         String ransomNote1 = "aa", magazine1 = "aab";
         String ransomNote = "aa", magazine = "ab";
