@@ -30,7 +30,10 @@ public class Streams2 {
                 ));
         System.out.println(collect);
 
+        System.out.println("-------------------------------------------------         EMPLOYEES          ------------------------------------------------");
         List<Employee> listOfEmployees = EmployeeFactory.getAllEmployees();
+        listOfEmployees.forEach(e -> System.out.println(e));
+        System.out.println("----------------------------------------------------------------------------------------------------------------------");
         Map<String, Long> empCountByDept = listOfEmployees.stream()
                 .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
         System.out.println(empCountByDept);
@@ -40,5 +43,16 @@ public class Streams2 {
                         Employee::getDepartment, Collectors.maxBy(
                                 Comparator.comparingDouble(Employee::getSalary))));
         System.out.println(empMaxSalByDept);
+
+        getCountOfMaleFemale(listOfEmployees);
+
+    }
+
+    public static void getCountOfMaleFemale(List<Employee> employeeList) {
+        Map<String, Long> noOfMaleAndFemaleEmployees =
+                employeeList.stream()
+                        .collect(Collectors.groupingBy
+                                (Employee::getGender, Collectors.counting()));
+        System.out.println(noOfMaleAndFemaleEmployees);
     }
 }
