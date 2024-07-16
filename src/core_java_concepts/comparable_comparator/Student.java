@@ -10,6 +10,22 @@ public class Student implements Comparable<Student> {
     private int id;
     private String name;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Student(int id, String name){
         this.id = id;
         this.name = name;
@@ -54,7 +70,11 @@ public class Student implements Comparable<Student> {
         studentList.add(s3);
 
         System.out.println("Before Comparable Sorting : " + studentList);
-        Collections.sort(studentList);
-        System.out.println("Before Comparator Sorting : " + studentList);
+        //Collections.sort(studentList);
+        System.out.println("After Comparable Sorting : " + studentList);
+
+        System.out.println("Comparison using comparator --------------------------------------------------");
+        Collections.sort(studentList, new NameComparator());
+        System.out.println("After Comparator Sorting : " + studentList);
     }
 }
